@@ -1,0 +1,680 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ERAN — Parcels, moved simply</title>
+  <meta name="description" content="Send, track and pick up parcels with ERAN. Same-day delivery, live tracking and friendly riders across your city.">
+  <meta name="theme-color" content="#F6F0E4">
+  <link rel="icon" href="assets/brand/symbol-violet.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="is-loading">
+
+  <!-- ============ Preloader: the plane takes off ============ -->
+  <div class="loader" aria-hidden="true">
+    <div class="loader-sky">
+      <svg class="loader-trail" viewBox="0 0 600 400" preserveAspectRatio="none"><path d="M-20 380 C 120 360, 220 300, 300 200 S 480 40, 640 10"/></svg>
+      <img class="loader-plane" src="assets/brand/symbol-white.svg" width="250" height="200" alt="">
+    </div>
+    <div class="loader-foot">
+      <img class="loader-logo" src="assets/brand/logo-white.svg" width="440" height="90" alt="">
+      <div class="loader-count"><span>0</span>%</div>
+    </div>
+  </div>
+
+  <div class="cursor" aria-hidden="true"><div class="cursor-ring"><span>Drag</span></div><div class="cursor-dot"></div></div>
+  <div class="progress" aria-hidden="true"></div>
+
+  <!-- ============ Nav ============ -->
+  <header class="nav" id="nav">
+    <nav class="nav-bar" aria-label="Main">
+      <a href="#top" class="nav-logo" aria-label="ERAN home">
+        <img class="nav-sym" src="assets/brand/symbol-violet.svg" width="250" height="200" alt="">
+        <span class="nav-word">
+          <img class="logo-light" src="assets/brand/logo-primary.svg" width="440" height="90" alt="ERAN">
+          <img class="logo-dark" src="assets/brand/logo-reversed.svg" width="440" height="90" alt="" aria-hidden="true">
+        </span>
+      </a>
+      <div class="nav-pill">
+        <span class="nav-ind" aria-hidden="true"></span>
+        <ul class="nav-links">
+          <li><a href="#send">Send</a></li>
+          <li><a href="#track">Track</a></li>
+          <li><a href="#business">Business</a></li>
+          <li><a href="#riders">Ride</a></li>
+          <li><a href="#help">Help</a></li>
+        </ul>
+      </div>
+      <div class="nav-right">
+        <span class="nav-live"><span class="pulse pulse--lime"></span><b data-live>1,204</b> riders live</span>
+        <a href="#send" class="btn btn--sm btn--lime nav-cta" data-magnetic>Send a package <span class="btn-arrow">→</span></a>
+        <button class="nav-burger" aria-label="Open menu" aria-expanded="false"><i></i><i></i></button>
+      </div>
+    </nav>
+  </header>
+
+  <div class="mmenu" aria-hidden="true">
+    <a href="#send"><span>Send</span></a>
+    <a href="#track"><span>Track</span></a>
+    <a href="#business"><span>Business</span></a>
+    <a href="#riders"><span>Ride with us</span></a>
+    <a href="#help"><span>Help</span></a>
+    <div class="mmenu-foot">
+      <span>On the move.</span>
+      <img src="assets/brand/symbol-lime.svg" width="250" height="200" alt="">
+    </div>
+  </div>
+
+  <main id="top">
+
+    <!-- ============ Hero ============ -->
+    <section class="hero">
+      <div class="wrap hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow" data-hero-fade>Logistics &amp; Delivery</p>
+          <h1 class="display hero-title">
+            <span class="line"><span class="split-chars">Parcels,</span></span>
+            <span class="line accent"><span class="split-chars">moved simply.</span></span>
+          </h1>
+          <p class="hero-tag" data-hero-fade>Speed. Direction. Precision.</p>
+          <div class="hero-ctas" data-hero-fade>
+            <a href="#send" class="btn btn--primary" data-magnetic>Send a package <span class="btn-arrow">→</span></a>
+            <a href="#track" class="btn btn--outline" data-magnetic>Track delivery <span class="btn-arrow">→</span></a>
+          </div>
+          <div class="hero-row" data-hero-fade>
+            <span class="pill-lime">On the move.</span>
+            <form class="track-quick" autocomplete="off">
+              <label for="quick-id" class="sr-only">Tracking number</label>
+              <img src="assets/brand/symbol-violet.svg" width="250" height="200" alt="">
+              <input id="quick-id" name="id" placeholder="Tracking no. e.g. ERN-48213" spellcheck="false">
+              <button type="submit" aria-label="Track parcel">→</button>
+            </form>
+          </div>
+        </div>
+
+        <div class="hero-stage" aria-hidden="true">
+          <div class="hero-circle" data-depth="10"></div>
+          <svg class="orbit" viewBox="0 0 620 620"><circle cx="310" cy="310" r="300"/></svg>
+          <div class="orbit-plane"><span class="orbit-trail"></span><img src="assets/brand/symbol-lime.svg" width="250" height="200" alt=""></div>
+          <div class="badge" data-depth="18">
+            <svg viewBox="0 0 200 200"><defs><path id="badge-path" d="M100,100 m-74,0 a74,74 0 1,1 148,0 a74,74 0 1,1 -148,0"/></defs><text><textPath href="#badge-path">ON THE MOVE · SAME DAY · LIVE TRACKING · </textPath></text></svg>
+            <img src="assets/brand/symbol-violet.svg" width="250" height="200" alt="">
+          </div>
+          <img class="h-obj h-pin" data-depth="46" src="assets/img/textured-violet-location-pin.webp" width="669" height="1000" alt="">
+          <img class="h-obj h-phone" data-depth="38" src="assets/img/hand-drawn-route-smartphone.webp" width="607" height="1000" alt="">
+          <img class="h-obj h-clock" data-depth="28" src="assets/img/friendly-delivery-clock-with-lime-motion-strokes.webp" width="878" height="787" alt="">
+          <img class="h-obj h-env" data-depth="34" src="assets/img/sealed-violet-flap-document-envelope.webp" width="1000" height="748" alt="">
+          <img class="h-obj h-boxes" data-depth="52" src="assets/img/crayon-style-parcel-stack.webp" width="831" height="803" alt="">
+          <div class="h-char h-rider" data-depth="22"><img src="assets/img/motorcycle-rider-gripping-both-handlebars.webp" width="1000" height="969" alt=""></div>
+          <div class="h-char h-courier" data-depth="30"><img src="assets/img/smiling-courier-carrying-a-lime-taped-parcel.webp" width="546" height="1000" alt=""></div>
+        </div>
+      </div>
+
+      <div class="strip-zone">
+        <div class="strip strip--lime" data-marquee>
+          <div class="strip-track">
+            <span>On the move</span><img src="assets/brand/sep.svg" width="35" height="28" alt="">
+            <span>Send a package</span><img src="assets/brand/sep.svg" width="35" height="28" alt="">
+            <span>Track delivery</span><img src="assets/brand/sep.svg" width="35" height="28" alt="">
+            <span>Pick up</span><img src="assets/brand/sep.svg" width="35" height="28" alt="">
+            <span>Go</span><img src="assets/brand/sep.svg" width="35" height="28" alt="">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ Ride-through: the rider fills the headline ============ -->
+    <section class="ride" aria-label="On the move">
+      <div class="ride-pin">
+        <div class="ride-words" aria-hidden="true">
+          <span class="ride-outline">On the move.</span>
+          <span class="ride-fill">On the move.</span>
+        </div>
+        <svg class="ride-road" viewBox="0 0 1440 40" preserveAspectRatio="none" aria-hidden="true"><path d="M0 20 H1440"/></svg>
+        <div class="ride-rider" aria-hidden="true">
+          <div class="ride-speed"><i></i><i></i><i></i></div>
+          <img src="assets/img/motorcycle-rider-gripping-both-handlebars.webp" width="1000" height="969" alt="">
+        </div>
+        <div class="ride-pin-drop" aria-hidden="true"><img src="assets/img/textured-violet-location-pin.webp" width="669" height="1000" alt=""></div>
+        <div class="wrap ride-copy">
+          <p class="h3">Across town, same day.</p>
+          <p class="body-m">Average city delivery in under 45 minutes. Our riders know the shortcuts.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ Unbox: dive into the box ============ -->
+    <section class="unbox" aria-label="What's in the box">
+      <div class="unbox-pin">
+        <h2 class="display h1 unbox-q">What's in <em>the box?</em></h2>
+        <div class="unbox-stage" aria-hidden="true">
+          <img class="ub-item ub-1" src="assets/img/sealed-violet-flap-document-envelope.webp" width="1000" height="748" alt="">
+          <img class="ub-item ub-2" src="assets/img/lime-taped-parcel-with-violet-label.webp" width="885" height="774" alt="">
+          <img class="ub-item ub-3" src="assets/img/hand-drawn-violet-and-lime-mailer.webp" width="705" height="1000" alt="">
+          <img class="ub-item ub-4" src="assets/img/lime-packing-tape-with-curling-end.webp" width="1000" height="632" alt="">
+          <img class="ub-item ub-5" src="assets/img/violet-motorcycle-helmet-with-lime-stripe.webp" width="946" height="961" alt="">
+          <img class="ub-box" src="assets/img/open-shipping-box-with-violet-interior.webp" width="1000" height="737" alt="">
+        </div>
+        <div class="unbox-flood" aria-hidden="true"></div>
+        <div class="unbox-say">
+          <p class="eyebrow eyebrow--lime">Anything, really</p>
+          <h2 class="display xl"><span class="say-line">Cakes. Contracts.</span><span class="say-line"><em>Sneakers.</em> Stock.</span></h2>
+          <p class="body-l">If it fits on a bike, we'll move it today. Bigger? We've got vans.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ Category cards ============ -->
+    <section class="sec cats" id="pickup">
+      <div class="wrap">
+        <div class="sec-head sec-head--split">
+          <div>
+            <p class="eyebrow" data-reveal>What do you need?</p>
+            <h2 class="display h1" data-split>One app. <em>Every way</em> to move it.</h2>
+          </div>
+          <p class="body-l muted" data-reveal>Whether it's a birthday gift across town or fifty orders for your shop, ERAN gets it there. Pick a lane.</p>
+        </div>
+        <div class="cat-row">
+          <figure class="cat-item" data-pop>
+            <a class="cat cat--lilac" href="#send">
+              <span class="cat-go">↗</span>
+              <img class="cat-char" src="assets/img/smiling-entrepreneur-with-lime-sealed-parcel.webp" alt="ERAN customer holding a sealed parcel">
+              <span class="cat-label">Send</span>
+            </a>
+            <figcaption>Book a rider in seconds.</figcaption>
+          </figure>
+          <figure class="cat-item" data-pop>
+            <a class="cat cat--lime" href="#track">
+              <span class="cat-go">↗</span>
+              <img class="cat-char" src="assets/img/focused-delivery-rider-checking-smartphone.webp" alt="ERAN courier checking his phone">
+              <span class="cat-label">Track</span>
+            </a>
+            <figcaption>Watch it move, live.</figcaption>
+          </figure>
+          <figure class="cat-item" data-pop>
+            <a class="cat cat--mist" href="#faq-pickup">
+              <span class="cat-go">↗</span>
+              <img class="cat-char" src="assets/img/relieved-customer-hugging-a-lime-sealed-parcel.webp" alt="ERAN customer hugging her parcel">
+              <span class="cat-label">Pick up</span>
+            </a>
+            <figcaption>Collect when it suits you.</figcaption>
+          </figure>
+          <figure class="cat-item" data-pop>
+            <a class="cat cat--violet" href="#business">
+              <span class="cat-go">↗</span>
+              <img class="cat-char" src="assets/img/business-owner-packing-a-shipping-box.webp" alt="ERAN business owner packing a box">
+              <span class="cat-label">Business</span>
+            </a>
+            <figcaption>Ship in bulk, pay less.</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ How it works (pinned horizontal) ============ -->
+    <section class="how" aria-labelledby="how-title">
+      <div class="how-pin">
+        <div class="wrap">
+          <div class="how-top">
+            <div>
+              <p class="eyebrow" data-reveal>How it works</p>
+              <h2 class="display h1" id="how-title" data-split>Three steps. <em>Zero stress.</em></h2>
+            </div>
+            <a href="#send" class="btn btn--violet" data-magnetic>Get started <span class="btn-arrow">→</span></a>
+          </div>
+          <div class="how-rail" aria-hidden="true">
+            <div class="rail"></div>
+            <div class="rail-fill"></div>
+            <span class="stop" style="left:0%"></span>
+            <span class="stop" style="left:50%"></span>
+            <span class="stop" style="left:100%"></span>
+            <img class="rail-plane" src="assets/brand/symbol-violet.svg" width="250" height="200" alt="">
+          </div>
+        </div>
+        <div class="how-track">
+          <article class="step step--lime">
+            <div class="step-txt">
+              <span class="step-n">01</span>
+              <div>
+                <h3 class="h2">Book in seconds</h3>
+                <p class="body-m">Drop in pickup and delivery addresses, pick a parcel size and pay in the app. No queues, no paperwork.</p>
+              </div>
+              <span class="chip chip--pending"><i></i><em>Pending</em></span>
+            </div>
+            <div class="step-art"><span class="ring"></span><img src="assets/img/hand-drawn-route-smartphone.webp" width="607" height="1000" alt="Phone showing a delivery route" loading="lazy"></div>
+          </article>
+          <article class="step step--violet">
+            <div class="step-txt">
+              <span class="step-n">02</span>
+              <div>
+                <h3 class="h2">We pick it up</h3>
+                <p class="body-m">A verified rider arrives in minutes, seals your parcel with ERAN tape and sends you a photo at handover.</p>
+              </div>
+              <span class="chip chip--picked"><i></i><em>Picked up</em></span>
+            </div>
+            <div class="step-art"><span class="ring"></span><img src="assets/img/braided-delivery-rider-with-violet-helmet.webp" width="395" height="1000" alt="Rider holding her helmet" loading="lazy"></div>
+          </article>
+          <article class="step step--mist">
+            <div class="step-txt">
+              <span class="step-n">03</span>
+              <div>
+                <h3 class="h2">Delivered, sealed</h3>
+                <p class="body-m">Follow every turn on the live map. They get it, you get a ping, and everyone gets on with their day.</p>
+              </div>
+              <span class="chip chip--delivered"><i></i><em>Delivered</em></span>
+            </div>
+            <div class="step-art"><span class="ring"></span><img src="assets/img/smiling-courier-offering-a-sealed-parcel.webp" width="406" height="1000" alt="Courier handing over a parcel" loading="lazy"></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ Live tracking ============ -->
+    <section class="sec track" id="track" data-nav-dark>
+      <div class="wrap">
+        <div class="sec-head sec-head--split">
+          <div>
+            <p class="eyebrow eyebrow--lime" data-reveal>Live tracking</p>
+            <h2 class="display h1" data-split>Watch it <em>move.</em></h2>
+          </div>
+          <p class="body-l" data-reveal>Every ERAN parcel shows up on the map from pickup to doorstep. Share the link and nobody has to ask "where is it?" again.</p>
+        </div>
+
+        <div class="track-grid">
+          <div class="map" data-pop>
+            <svg viewBox="0 0 600 480" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+              <path class="water" d="M-20 300 C 90 270, 160 350, 260 330 S 420 250, 620 290"/>
+              <g class="blocks">
+                <rect class="blk" x="30" y="30" width="110" height="80" rx="12"/>
+                <rect class="blk" x="160" y="30" width="90" height="120" rx="12"/>
+                <rect class="park" x="270" y="30" width="140" height="70" rx="12"/>
+                <rect class="blk" x="430" y="30" width="140" height="90" rx="12"/>
+                <rect class="blk" x="30" y="130" width="110" height="110" rx="12"/>
+                <rect class="blk" x="270" y="120" width="70" height="110" rx="12"/>
+                <rect class="blk" x="360" y="120" width="90" height="60" rx="12"/>
+                <rect class="park" x="470" y="140" width="100" height="100" rx="12"/>
+                <rect class="blk" x="160" y="170" width="90" height="70" rx="12"/>
+                <rect class="blk" x="360" y="200" width="90" height="40" rx="10"/>
+                <rect class="blk" x="30" y="370" width="150" height="80" rx="12"/>
+                <rect class="park" x="200" y="380" width="90" height="70" rx="12"/>
+                <rect class="blk" x="310" y="360" width="120" height="90" rx="12"/>
+                <rect class="blk" x="450" y="350" width="120" height="100" rx="12"/>
+              </g>
+              <path class="route-bg" d="M70 420 C 120 340, 200 360, 255 300 S 300 170, 350 160 S 460 120, 520 70"/>
+              <path class="route-fg" d="M70 420 C 120 340, 200 360, 255 300 S 300 170, 350 160 S 460 120, 520 70"/>
+              <g class="pin-a" transform="translate(70 420)"><circle r="16" fill="#7E4CFD" stroke="#0F0934" stroke-width="3"/><circle r="5" fill="#fff"/></g>
+              <g class="pin-b" transform="translate(520 70)"><circle r="16" fill="#BAEE3F" stroke="#0F0934" stroke-width="3"/><circle r="5" fill="#0F0934"/></g>
+              <g class="marker">
+                <circle class="marker-halo" r="26" fill="rgba(186,238,63,.25)"/>
+                <circle r="15" fill="#BAEE3F" stroke="#0F0934" stroke-width="3"/>
+                <image href="assets/brand/symbol-midnight.svg" x="-9" y="-7" width="18" height="14"/>
+              </g>
+            </svg>
+            <div class="map-tag map-tag--a">Yaba</div>
+            <div class="map-tag map-tag--b">Lekki Phase 1</div>
+            <div class="map-live"><span class="pulse"></span> Live</div>
+            <div class="notif-stack" aria-live="polite"></div>
+          </div>
+
+          <div class="tcard" data-pop>
+            <div class="tcard-top">
+              <div class="tcard-id">Order<b>ERN-48213</b></div>
+              <div class="eta"><span class="eta-n">24</span><small>min away</small></div>
+            </div>
+            <span class="chip chip--pending tcard-chip"><i></i><em>Pending</em></span>
+            <div class="tbar"><i></i></div>
+            <ol class="tsteps">
+              <li data-at="0">Order confirmed <time>12:02</time></li>
+              <li data-at=".1">Picked up in Yaba <time>12:09</time></li>
+              <li data-at=".22">In transit <time>12:10</time></li>
+              <li data-at="1">Delivered <time>—</time></li>
+            </ol>
+            <div class="trider">
+              <div class="trider-av"><img src="assets/img/focused-delivery-rider-checking-smartphone.webp" width="332" height="1000" alt=""></div>
+              <div class="trider-info"><b>Tobi A.</b>4.9 ★ · 1,240 trips</div>
+              <button class="icon-btn" aria-label="Call rider"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg></button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ Send: price estimator ============ -->
+    <section class="sec send" id="send">
+      <div class="wrap">
+        <div class="sec-head sec-head--split">
+          <div>
+            <p class="eyebrow" data-reveal>Send a package</p>
+            <h2 class="display h1" data-split>Know the price <em>before you book.</em></h2>
+          </div>
+          <p class="body-l muted" data-reveal>No surprises at the door. Choose a size, slide the distance and see what you'll pay.</p>
+        </div>
+
+        <div class="send-grid">
+          <div class="panel" data-pop>
+            <div class="route-fields">
+              <label class="field"><span class="f-dot"></span><span class="f-label">From</span><input value="Yaba, Lagos" aria-label="Pickup address"></label>
+              <label class="field"><span class="f-dot f-dot--lime"></span><span class="f-label">To</span><input value="Lekki Phase 1" aria-label="Delivery address"></label>
+              <button class="swap" type="button" aria-label="Swap addresses"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M7 4v16M7 4 3 8m4-4 4 4M17 20V4m0 16-4-4m4 4 4-4"/></svg></button>
+            </div>
+
+            <p class="label-row">Parcel size</p>
+            <div class="sizes" role="radiogroup" aria-label="Parcel size">
+              <button class="size is-active" role="radio" aria-checked="true" data-base="1200" data-name="Envelope">
+                <img src="assets/img/sealed-violet-flap-document-envelope.webp" width="1000" height="748" alt="" loading="lazy">
+                <b>Envelope</b><small>Docs, up to 1kg</small>
+              </button>
+              <button class="size" role="radio" aria-checked="false" data-base="1800" data-name="Small box">
+                <img src="assets/img/lime-taped-parcel-with-violet-label.webp" width="885" height="774" alt="" loading="lazy">
+                <b>Small box</b><small>Up to 5kg</small>
+              </button>
+              <button class="size" role="radio" aria-checked="false" data-base="3200" data-name="Large">
+                <img src="assets/img/crayon-style-parcel-stack.webp" width="831" height="803" alt="" loading="lazy">
+                <b>Large</b><small>Up to 20kg</small>
+              </button>
+            </div>
+
+            <p class="label-row">Distance <output id="km-out">12 km</output></p>
+            <input class="range" id="km" type="range" min="1" max="40" value="12" aria-label="Distance in kilometres">
+
+            <div class="toggle" role="tablist" aria-label="Speed">
+              <span class="toggle-ind"></span>
+              <button class="is-active" data-speed="1" role="tab" aria-selected="true">Standard</button>
+              <button data-speed="1.5" role="tab" aria-selected="false">Express</button>
+            </div>
+          </div>
+
+          <div class="quote" data-pop>
+            <img class="quote-art" src="assets/img/violet-dispatch-motorcycle-with-cargo-box.webp" width="1000" height="799" alt="" loading="lazy">
+            <div>
+              <p class="eyebrow eyebrow--lime">Your estimate</p>
+              <div class="price"><sup>₦</sup><span id="price">2,640</span></div>
+            </div>
+            <div class="quote-meta">
+              <div><span>Parcel</span><b id="q-size">Envelope</b></div>
+              <div><span>Arrives in</span><b id="q-eta">~38 min</b></div>
+              <div><span>Insurance</span><b>Included</b></div>
+            </div>
+            <button class="btn btn--lime quote-go" type="button" data-magnetic><span class="btn-text">Send a package</span> <span class="btn-arrow">→</span></button>
+            <p class="fine">Example pricing for illustration only.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ Stats ============ -->
+    <section class="stats" aria-label="ERAN in numbers">
+      <div class="wrap">
+        <div class="stats-grid">
+          <div class="stat" data-reveal><div class="stat-n"><span data-count="2.4" data-dec="1">0</span><em>M</em></div><p>Parcels delivered</p></div>
+          <div class="stat" data-reveal><div class="stat-n"><span data-count="8500">0</span><em>+</em></div><p>Verified riders</p></div>
+          <div class="stat" data-reveal><div class="stat-n"><span data-count="38">0</span><em>min</em></div><p>Average city delivery</p></div>
+          <div class="stat" data-reveal><div class="stat-n"><span data-count="99.2" data-dec="1">0</span><em>%</em></div><p>Delivered on time</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ Riders ============ -->
+    <section class="sec riders" id="riders" data-nav-dark>
+      <div class="wrap riders-grid">
+        <div class="riders-art" aria-hidden="true">
+          <div class="sun"></div>
+          <img class="bag" src="assets/img/violet-insulated-courier-backpack.webp" width="934" height="926" alt="" loading="lazy">
+          <img class="helmet" src="assets/img/violet-motorcycle-helmet-with-lime-stripe.webp" width="946" height="961" alt="" loading="lazy">
+          <img class="big" src="assets/img/braided-courier-on-violet-dispatch-bike.webp" width="1000" height="965" alt="" loading="lazy">
+        </div>
+        <div>
+          <p class="eyebrow eyebrow--lime" data-reveal>Ride with ERAN</p>
+          <h2 class="display h1" data-split>Your bike. <em>Your hours.</em></h2>
+          <ul class="perks">
+            <li data-reveal><b>Weekly pay</b>Straight to your bank, every Friday.</li>
+            <li data-reveal><b>Covered</b>Accident insurance on every trip.</li>
+            <li data-reveal><b>Flexible</b>Go online when it suits you.</li>
+          </ul>
+          <div class="earn" data-reveal>
+            <p class="label-row">Deliveries a day <output id="trips-out">12</output></p>
+            <input class="range range--lime" id="trips" type="range" min="4" max="30" value="12" aria-label="Deliveries per day">
+            <div class="earn-out"><b>₦<span id="earn">54,000</span></b><small>estimated weekly earnings, 6 days</small></div>
+          </div>
+          <a href="#" class="btn btn--lime riders-cta" data-magnetic>Become a rider <span class="btn-arrow">→</span></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ Business bento ============ -->
+    <section class="sec biz" id="business">
+      <div class="wrap">
+        <div class="sec-head sec-head--split">
+          <div>
+            <p class="eyebrow" data-reveal>ERAN for business</p>
+            <h2 class="display h1" data-split>Ship more. <em>Stress less.</em></h2>
+          </div>
+          <p class="body-l muted" data-reveal>From Instagram stores to restaurants and pharmacies, ERAN is the delivery team you don't have to hire.</p>
+        </div>
+        <div class="bento">
+          <article class="bcard bcard--a" data-pop>
+            <div>
+              <h3 class="h2">Bulk dispatch</h3>
+              <p class="body-m">Upload a sheet, we batch the routes and send the riders. Fifty orders out the door before lunch.</p>
+            </div>
+            <a href="#" class="btn btn--sm btn--primary">Talk to sales <span class="btn-arrow">→</span></a>
+            <img src="assets/img/hand-trolley-with-stacked-parcels.webp" width="721" height="974" alt="" loading="lazy">
+          </article>
+          <article class="bcard bcard--b" data-pop>
+            <div>
+              <h3 class="h2">Plug in our API</h3>
+              <p class="body-m">Create deliveries from your checkout and get webhooks at every step.</p>
+            </div>
+<pre class="code"><span class="k">POST</span> /v1/deliveries
+{
+  <span class="s">"pickup"</span>: <span class="s">"Yaba, Lagos"</span>,
+  <span class="s">"dropoff"</span>: <span class="s">"Lekki Phase 1"</span>,
+  <span class="s">"size"</span>: <span class="s">"small"</span>
+}</pre>
+          </article>
+          <article class="bcard bcard--c" data-pop>
+            <img src="assets/img/violet-parcel-pickup-shopfront.webp" width="940" height="863" alt="" loading="lazy">
+            <div><h3 class="h3">ERAN points</h3><p class="body-m">Drop off or collect at partner shops near you.</p></div>
+          </article>
+          <article class="bcard bcard--d" data-pop>
+            <img src="assets/img/violet-desktop-calendar-with-lime-check.webp" width="877" height="766" alt="" loading="lazy">
+            <div><h3 class="h3">Scheduled pickups</h3><p class="body-m">Same time every day, no reminders needed.</p></div>
+          </article>
+          <article class="bcard bcard--e" data-pop>
+            <img src="assets/img/hand-drawn-violet-delivery-van.webp" width="1000" height="600" alt="" loading="lazy">
+            <div><h3 class="h3">Vans for big loads</h3><p class="body-m">When a bike won't cut it, a van will.</p></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ Crew + quotes ============ -->
+    <section class="quotes" aria-labelledby="q-title">
+      <div class="wrap">
+        <div class="q-head">
+          <div>
+            <p class="eyebrow" data-reveal>The ERAN crew</p>
+            <h2 class="display h1" id="q-title" data-split>People <em>love</em> a good delivery.</h2>
+          </div>
+          <div class="q-arrows">
+            <button class="q-prev" aria-label="Previous">←</button>
+            <button class="q-next" aria-label="Next">→</button>
+          </div>
+        </div>
+      </div>
+      <div class="q-viewport" data-cursor="drag">
+        <div class="q-track">
+          <figure class="q q--wave">
+            <img src="assets/img/waving-delivery-rider-in-violet.webp" width="394" height="1000" alt="ERAN courier waving hello" loading="lazy">
+            <figcaption><b>Say hi to the crew.</b><span>8,500 riders, one very good wave.</span></figcaption>
+          </figure>
+          <figure class="q">
+            <div class="q-mark">“</div>
+            <blockquote>I sent my sister's birthday cake from Yaba to Lekki and it arrived with every swirl intact. The rider even sang.</blockquote>
+            <figcaption class="q-who"><div class="q-av"><img src="assets/img/excited-customer-checking-her-phone.webp" width="471" height="1000" alt="" loading="lazy"></div><div><b>Adaeze O.</b><small>Sends gifts, often</small></div></figcaption>
+          </figure>
+          <figure class="q">
+            <div class="q-mark">“</div>
+            <blockquote>We moved our whole shop's deliveries to ERAN. Bulk upload saves me two hours every single morning.</blockquote>
+            <figcaption class="q-who"><div class="q-av"><img src="assets/img/joyful-business-owner-with-parcel.webp" width="445" height="1000" alt="" loading="lazy"></div><div><b>Kunle B.</b><small>Owner, Kunle's Kicks</small></div></figcaption>
+          </figure>
+          <figure class="q">
+            <div class="q-mark">“</div>
+            <blockquote>Watching the little plane move across the map is weirdly satisfying. I refresh it like it's a football score.</blockquote>
+            <figcaption class="q-who"><div class="q-av"><img src="assets/img/thoughtful-woman-in-violet-and-lime.webp" width="471" height="1000" alt="" loading="lazy"></div><div><b>Funmi A.</b><small>Tracks everything</small></div></figcaption>
+          </figure>
+          <figure class="q">
+            <div class="q-mark">“</div>
+            <blockquote>Weekly pay, fair routes and the support team actually picks up. Best rider gig I've had.</blockquote>
+            <figcaption class="q-who"><div class="q-av"><img src="assets/img/smiling-rider-giving-a-thumbs-up.webp" width="428" height="1000" alt="" loading="lazy"></div><div><b>Halima S.</b><small>ERAN rider, 2 years</small></div></figcaption>
+          </figure>
+          <figure class="q">
+            <div class="q-mark">“</div>
+            <blockquote>Contracts signed and back on my desk in 40 minutes. ERAN is now part of how we close deals.</blockquote>
+            <figcaption class="q-who"><div class="q-av"><img src="assets/img/smiling-entrepreneur-with-lime-sealed-parcel.webp" width="375" height="1000" alt="" loading="lazy"></div><div><b>Chidi E.</b><small>Legal ops, Ikoyi</small></div></figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ FAQ ============ -->
+    <section class="sec faq" id="help">
+      <div class="wrap faq-grid">
+        <div class="faq-side">
+          <p class="eyebrow" data-reveal>Help</p>
+          <h2 class="display h1" data-split>Questions? <em>Sorted.</em></h2>
+          <div class="help" data-pop>
+            <h3 class="h3">Talk to a human</h3>
+            <p class="body-m">Our support team is up 24/7, on chat and on the phone.</p>
+            <a href="#" class="btn btn--sm btn--lime">Start a chat <span class="btn-arrow">→</span></a>
+            <img src="assets/img/welcoming-headset-support-agent.webp" width="457" height="1000" alt="" loading="lazy">
+          </div>
+        </div>
+        <div class="faq-list">
+          <div class="qa is-open" data-reveal>
+            <button class="qa-q" aria-expanded="true">What can I send with ERAN?<span class="qa-ic"></span></button>
+            <div class="qa-a"><p>Documents, gifts, clothes, electronics, food in sealed packaging and most everyday items up to 20kg on a bike. Bigger loads go by van. We can't carry cash, weapons, or anything illegal.</p></div>
+          </div>
+          <div class="qa" data-reveal>
+            <button class="qa-q" aria-expanded="false">How fast is delivery?<span class="qa-ic"></span></button>
+            <div class="qa-a"><p>Most deliveries within a city arrive the same day, and Express trips usually take under an hour. You'll see a live ETA as soon as a rider picks up.</p></div>
+          </div>
+          <div class="qa" id="faq-pickup" data-reveal>
+            <button class="qa-q" aria-expanded="false">Can I pick up instead of waiting at home?<span class="qa-ic"></span></button>
+            <div class="qa-a"><p>Yes. Choose an ERAN point at checkout and we'll drop your parcel at a partner shop near you. Collect it with the code we send, whenever it suits you.</p></div>
+          </div>
+          <div class="qa" data-reveal>
+            <button class="qa-q" aria-expanded="false">Is my parcel insured?<span class="qa-ic"></span></button>
+            <div class="qa-a"><p>Every delivery includes basic cover. For valuable items you can add extra protection when you book.</p></div>
+          </div>
+          <div class="qa" data-reveal>
+            <button class="qa-q" aria-expanded="false">Do you offer cash on delivery for my store?<span class="qa-ic"></span></button>
+            <div class="qa-a"><p>Business accounts can collect payment on delivery. Funds settle to your wallet the next working day.</p></div>
+          </div>
+          <div class="qa" data-reveal>
+            <button class="qa-q" aria-expanded="false">How do I become a rider?<span class="qa-ic"></span></button>
+            <div class="qa-a"><p>Apply in the ERAN Rider app with a valid ID, your bike papers and a guarantor. Most riders are on the road within a week.</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ Download CTA ============ -->
+    <section class="cta">
+      <div class="wrap">
+        <div class="cta-box">
+          <div class="cta-copy">
+            <h2 class="display xl" data-split>Got something <em>to send?</em></h2>
+            <p class="body-l">Get the ERAN app and book your first delivery in under a minute.</p>
+            <div class="stores">
+              <a href="#" class="store" data-magnetic>
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.4 12.6c0-2.6 2.1-3.8 2.2-3.9-1.2-1.8-3.1-2-3.7-2-1.6-.2-3.1.9-3.9.9-.8 0-2-.9-3.4-.9-1.7 0-3.3 1-4.2 2.6-1.8 3.1-.5 7.7 1.3 10.2.9 1.2 1.9 2.6 3.2 2.6 1.3-.1 1.8-.8 3.3-.8 1.6 0 2 .8 3.4.8 1.4 0 2.3-1.3 3.1-2.5 1-1.4 1.4-2.8 1.4-2.9 0 0-2.7-1-2.7-4.1zM13.9 5c.7-.9 1.2-2 1.1-3.2-1 0-2.3.7-3 1.6-.7.8-1.2 2-1.1 3.1 1.2.1 2.3-.6 3-1.5z"/></svg>
+                <span><small>Download on the</small><b>App Store</b></span>
+              </a>
+              <a href="#" class="store" data-magnetic>
+                <svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true"><path fill="#BAEE3F" d="M3.6 1.8 13.8 12 3.6 22.2c-.4-.2-.6-.6-.6-1.1V2.9c0-.5.2-.9.6-1.1z"/><path fill="#fff" d="m17.2 8.6-3.4 3.4-10.2-10.2c.3-.2.8-.2 1.2 0l12.4 6.8z"/><path fill="#7E4CFD" d="m17.2 15.4-12.4 6.8c-.4.2-.9.2-1.2 0L13.8 12l3.4 3.4z"/><path fill="#D9C9FF" d="m21 12c0 .5-.3 1-.8 1.2l-3 1.7-3.4-3.4 3.4-3.4 3 1.7c.5.2.8.7.8 1.2z"/></svg>
+                <span><small>Get it on</small><b>Google Play</b></span>
+              </a>
+            </div>
+            <div class="promo">
+              <div><small>₦500 off your first delivery</small><span class="promo-code">ERANFIRST</span></div>
+              <button type="button" class="promo-copy">Copy code</button>
+            </div>
+          </div>
+          <div class="cta-art" aria-hidden="true">
+            <div class="cta-blob"></div>
+            <img class="phone" src="assets/img/hand-drawn-route-smartphone.webp" width="607" height="1000" alt="" loading="lazy">
+            <img class="cust" src="assets/img/excited-customer-checking-her-phone.webp" width="471" height="1000" alt="" loading="lazy">
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ Footer ============ -->
+  <footer class="foot" data-nav-dark>
+    <div class="strip-zone strip-zone--foot">
+      <div class="strip strip--violet" data-marquee data-reverse>
+        <div class="strip-track">
+          <span>On the move</span><img src="assets/brand/symbol-white.svg" width="35" height="28" alt="">
+          <span>Send a package</span><img src="assets/brand/symbol-white.svg" width="35" height="28" alt="">
+          <span>Track delivery</span><img src="assets/brand/symbol-white.svg" width="35" height="28" alt="">
+          <span>Pick up</span><img src="assets/brand/symbol-white.svg" width="35" height="28" alt="">
+          <span>Go</span><img src="assets/brand/symbol-white.svg" width="35" height="28" alt="">
+        </div>
+      </div>
+    </div>
+    <div class="wrap">
+      <div class="foot-top">
+        <div class="news">
+          <h4>Stay in the loop</h4>
+          <p class="body-m">Promos, new cities and the occasional rider story. No spam.</p>
+          <form onsubmit="return false">
+            <input type="email" placeholder="you@email.com" aria-label="Email address">
+            <button class="btn btn--sm btn--lime" type="submit">Subscribe <span class="btn-arrow">→</span></button>
+          </form>
+        </div>
+        <div><h4>Company</h4><ul><li><a href="#">About</a></li><li><a href="#">Careers</a></li><li><a href="#">Press</a></li><li><a href="#">Blog</a></li></ul></div>
+        <div><h4>Product</h4><ul><li><a href="#send">Send</a></li><li><a href="#track">Track</a></li><li><a href="#business">Business</a></li><li><a href="#">API docs</a></li></ul></div>
+        <div><h4>Support</h4><ul><li><a href="#help">Help centre</a></li><li><a href="#riders">Ride with us</a></li><li><a href="#">Terms</a></li><li><a href="#">Privacy</a></li></ul></div>
+      </div>
+      <div class="foot-mark" aria-hidden="true">
+        <img src="assets/brand/logo-reversed.svg" width="440" height="90" alt="">
+      </div>
+      <div class="foot-bot">
+        <span>© 2026 ERAN Logistics. On the move.</span>
+        <div class="socials">
+          <a href="#" aria-label="Instagram"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg></a>
+          <a href="#" aria-label="X"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.8 3h3.1l-6.8 7.7L22 21h-6.2l-4.9-6.4L5.3 21H2.2l7.2-8.3L1.8 3h6.4l4.4 5.8L17.8 3zm-1.1 16.2h1.7L7.3 4.7H5.5l11.2 14.5z"/></svg></a>
+          <a href="#" aria-label="TikTok"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M16.6 2h-3.3v13.4a2.9 2.9 0 1 1-2.9-2.9c.3 0 .6 0 .9.1V9.2a6.3 6.3 0 1 0 5.3 6.2V8.6a8 8 0 0 0 4.7 1.5V6.8a4.7 4.7 0 0 1-4.7-4.8z"/></svg></a>
+          <a href="#" aria-label="LinkedIn"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9h4v12H3zM9 9h3.8v1.7h.1c.5-1 1.8-2 3.8-2 4 0 4.8 2.6 4.8 6V21h-4v-5.5c0-1.3 0-3-1.8-3s-2.1 1.4-2.1 2.9V21H9z"/></svg></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Send confirmation: the plane flies, a notification lands -->
+  <div class="sent-plane" aria-hidden="true"><span class="sent-trail"></span><img src="assets/brand/symbol-violet.svg" width="250" height="200" alt=""></div>
+  <div class="toast" role="status" aria-live="polite">
+    <div class="ncard">
+      <div class="ncard-icon ncard-icon--lime"><img src="assets/brand/symbol-midnight.svg" width="250" height="200" alt=""></div>
+      <div class="ncard-body">
+        <small>ERAN · now</small>
+        <b class="toast-title">Rider on the way</b>
+        <span class="toast-body">Tobi is 4 minutes from your pickup.</span>
+      </div>
+    </div>
+  </div>
+  <canvas class="confetti" aria-hidden="true"></canvas>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/CustomEase.min.js"></script>
+  <script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
